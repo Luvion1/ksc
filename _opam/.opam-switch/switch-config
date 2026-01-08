@@ -1,0 +1,11 @@
+opam-version: "2.0"
+synopsis: "/workspaces/ksc"
+opam-root: "/home/codespace/.opam"
+invariant: ["ocaml-system"]
+paths {
+  
+}
+variables {
+  user: "codespace"
+  group: "codespace"
+}

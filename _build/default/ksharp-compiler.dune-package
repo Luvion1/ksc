@@ -1,0 +1,90 @@
+(lang dune 3.20)
+(name ksharp-compiler)
+(version 0.1.0)
+(sections (lib .) (libexec .) (bin ../../bin) (doc ../../doc/ksharp-compiler))
+(files
+ (lib
+  (META
+   dune-package
+   lib/ast.ml
+   lib/codegen.ml
+   lib/compiler.ml
+   lib/ksharp.a
+   lib/ksharp.cma
+   lib/ksharp.cmi
+   lib/ksharp.cmt
+   lib/ksharp.cmx
+   lib/ksharp.cmxa
+   lib/ksharp.ml
+   lib/ksharp__Ast.cmi
+   lib/ksharp__Ast.cmt
+   lib/ksharp__Ast.cmx
+   lib/ksharp__Codegen.cmi
+   lib/ksharp__Codegen.cmt
+   lib/ksharp__Codegen.cmx
+   lib/ksharp__Compiler.cmi
+   lib/ksharp__Compiler.cmt
+   lib/ksharp__Compiler.cmx
+   lib/ksharp__Lexer.cmi
+   lib/ksharp__Lexer.cmt
+   lib/ksharp__Lexer.cmx
+   lib/ksharp__Parser.cmi
+   lib/ksharp__Parser.cmt
+   lib/ksharp__Parser.cmti
+   lib/ksharp__Parser.cmx
+   lib/ksharp__Semantic.cmi
+   lib/ksharp__Semantic.cmt
+   lib/ksharp__Semantic.cmx
+   lib/lexer.ml
+   lib/parser.ml
+   lib/parser.mli
+   lib/semantic.ml))
+ (libexec (lib/ksharp.cmxs))
+ (bin (ksharp))
+ (doc (README.md)))
+(library
+ (name ksharp-compiler.lib)
+ (kind normal)
+ (archives (byte lib/ksharp.cma) (native lib/ksharp.cmxa))
+ (plugins (byte lib/ksharp.cma) (native lib/ksharp.cmxs))
+ (native_archives lib/ksharp.a)
+ (main_module_name Ksharp)
+ (modes byte native)
+ (modules
+  (wrapped
+   (group
+    (alias
+     (obj_name ksharp)
+     (visibility public)
+     (kind alias)
+     (source (path Ksharp) (impl (path lib/ksharp.ml-gen))))
+    (name Ksharp)
+    (modules
+     (module
+      (obj_name ksharp__Ast)
+      (visibility public)
+      (source (path Ast) (impl (path lib/ast.ml))))
+     (module
+      (obj_name ksharp__Codegen)
+      (visibility public)
+      (source (path Codegen) (impl (path lib/codegen.ml))))
+     (module
+      (obj_name ksharp__Compiler)
+      (visibility public)
+      (source (path Compiler) (impl (path lib/compiler.ml))))
+     (module
+      (obj_name ksharp__Lexer)
+      (visibility public)
+      (source (path Lexer) (impl (path lib/lexer.ml))))
+     (module
+      (obj_name ksharp__Parser)
+      (visibility public)
+      (source
+       (path Parser)
+       (intf (path lib/parser.mli))
+       (impl (path lib/parser.ml))))
+     (module
+      (obj_name ksharp__Semantic)
+      (visibility public)
+      (source (path Semantic) (impl (path lib/semantic.ml))))))
+   (wrapped true))))

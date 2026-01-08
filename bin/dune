@@ -1,0 +1,5 @@
+(executable
+ (name main)
+ (public_name ksharp)
+ (libraries ksharp)
+ (ocamlc_flags (-w -26)))

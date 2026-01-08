@@ -1,0 +1,9 @@
+(library
+ (name ksharp)
+ (public_name ksharp-compiler.lib)
+ (ocamlc_flags (-w -33-39)))
+
+(menhir
+ (modules parser))
+
+(ocamllex lexer)

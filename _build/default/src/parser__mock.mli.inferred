@@ -1,0 +1,97 @@
+type token =
+    WHILE
+  | UNIT
+  | UNDERSCORE
+  | U8
+  | U64
+  | U32
+  | U16
+  | TYPE
+  | TRUE
+  | STRUCT
+  | STRING of string
+  | STR
+  | STAR
+  | SLASH
+  | SEMI
+  | RPAREN
+  | RETURN
+  | RBRACK
+  | RBRACE
+  | PUB
+  | PLUS
+  | PIPE
+  | PERCENT
+  | OR
+  | NIL
+  | NEQ
+  | MUT
+  | MINUS
+  | MATCH
+  | LT
+  | LPAREN
+  | LET
+  | LE
+  | LBRACK
+  | LBRACE
+  | INT of int
+  | IN
+  | IF
+  | IDENT of string
+  | I8
+  | I64
+  | I32
+  | I16
+  | GT
+  | GE
+  | FOR
+  | FN
+  | FLOAT of float
+  | FALSE
+  | F64
+  | F32
+  | EXT
+  | EQ
+  | EOF
+  | ENUM
+  | ELSE
+  | DOUBLECOLON
+  | DOTDOT
+  | DOT
+  | CONST
+  | COMMA
+  | COLON
+  | CHAR_LIT of char
+  | CHAR
+  | BOOL
+  | BANG
+  | ASSIGN
+  | AND
+val menhir_begin_marker : int
+val xv_unop : Ast.unop
+val xv_ty : Ast.ty
+val xv_stmt : Ast.stmt
+val xv_separated_nonempty_list_COMMA_param_ : (string * Ast.ty) list
+val xv_separated_nonempty_list_COMMA_expr_ : Ast.expr list
+val xv_separated_nonempty_list_COMMA_case_ : (Ast.pattern * Ast.expr) list
+val xv_separated_list_COMMA_param_ : (string * Ast.ty) list
+val xv_separated_list_COMMA_expr_ : Ast.expr list
+val xv_separated_list_COMMA_case_ : (Ast.pattern * Ast.expr) list
+val xv_program : Ast.program
+val xv_pattern : Ast.pattern
+val xv_param : string * Ast.ty
+val xv_option_expr_ : Ast.expr option
+val xv_option_PUB_ : unit option
+val xv_option_MUT_ : unit option
+val xv_loption_separated_nonempty_list_COMMA_param__ : (string * Ast.ty) list
+val xv_loption_separated_nonempty_list_COMMA_expr__ : Ast.expr list
+val xv_loption_separated_nonempty_list_COMMA_case__ :
+  (Ast.pattern * Ast.expr) list
+val xv_literal : Ast.literal
+val xv_list_stmt_ : Ast.stmt list
+val xv_list_func_ : Ast.program
+val xv_func : Ast.func
+val xv_expr : Ast.expr
+val xv_case : Ast.pattern * Ast.expr
+val xv_binop : Ast.binop
+val menhir_end_marker : int

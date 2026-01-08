@@ -1,0 +1,98 @@
+# dune exec ksharp test.ks
+# OCAMLPARAM: unset
+# Shared cache: enabled-except-user-rules
+# Shared cache location: /home/codespace/.cache/dune/db
+# Workspace root: /workspaces/ksc
+# Auto-detected concurrency: 2
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /usr/bin/ocamlc.opt -config > /tmp/dune_34ec3e_output
+$ (cd _build/.sandbox/41094a8a388a75957c2840ce64c9b81d/default && /workspaces/ksc/_opam/bin/menhir src/parser.mly --base src/parser --infer-write-query src/parser__mock.ml.mock)
+> File "src/parser.mly", line 9, characters 22-27:
+> Warning: the token CONST is unused.
+> File "src/parser.mly", line 11, characters 82-85:
+> Warning: the token DOT is unused.
+> File "src/parser.mly", line 11, characters 75-81:
+> Warning: the token DOTDOT is unused.
+> File "src/parser.mly", line 11, characters 98-109:
+> Warning: the token DOUBLECOLON is unused.
+> File "src/parser.mly", line 10, characters 59-63:
+> Warning: the token ENUM is unused.
+> File "src/parser.mly", line 10, characters 76-79:
+> Warning: the token EXT is unused.
+> File "src/parser.mly", line 11, characters 143-149:
+> Warning: the token LBRACK is unused.
+> File "src/parser.mly", line 9, characters 70-73:
+> Warning: the token NIL is unused.
+> File "src/parser.mly", line 11, characters 150-156:
+> Warning: the token RBRACK is unused.
+> File "src/parser.mly", line 9, characters 52-58:
+> Warning: the token RETURN is unused.
+> File "src/parser.mly", line 10, characters 69-75:
+> Warning: the token STRUCT is unused.
+> File "src/parser.mly", line 10, characters 64-68:
+> Warning: the token TYPE is unused.
+> File "src/parser.mly", line 13, characters 10-20:
+> Warning: the token below_SEMI is unused.
+$ (cd _build/default && /usr/bin/ocamllex -q -o src/lexer.ml src/lexer.mll)
+$ (cd _build/default && /usr/bin/ocamldep.opt -modules -impl src/lexer.ml) > _build/default/src/.ksharp.objs/ksharp__Lexer.impl.d
+$ (cd _build/.sandbox/a4d9ee2e02a2403c5ac76f19c3adb658/default && /usr/bin/ocamldep.opt -modules -impl src/parser__mock.ml.mock) > _build/.sandbox/a4d9ee2e02a2403c5ac76f19c3adb658/default/src/.ksharp.objs/parser__mock.impl.d
+$ (cd _build/.sandbox/49f4ddf9e7b60cbbc51590f9332c092c/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -33-39 -I src/.ksharp.objs/byte -open Ksharp -short-paths -i -impl src/parser__mock.ml.mock) > _build/.sandbox/49f4ddf9e7b60cbbc51590f9332c092c/default/src/parser__mock.mli.inferred
+$ (cd _build/.sandbox/540b640b93b03794cf5d3f1a287bee40/default && /workspaces/ksc/_opam/bin/menhir src/parser.mly --base src/parser --infer-read-reply src/parser__mock.mli.inferred)
+> File "src/parser.mly", line 17, characters 0-5:
+> Warning: the precedence level assigned to AND is never useful.
+> File "src/parser.mly", line 15, characters 0-6:
+> Warning: the precedence level assigned to ASSIGN is never useful.
+> File "src/parser.mly", line 22, characters 0-6:
+> Warning: the precedence level assigned to BANG is never useful.
+> File "src/parser.mly", line 23, characters 0-5:
+> Warning: the precedence level assigned to DOT is never useful.
+> File "src/parser.mly", line 18, characters 0-5:
+> Warning: the precedence level assigned to EQ is never useful.
+> File "src/parser.mly", line 19, characters 0-5:
+> Warning: the precedence level assigned to GE is never useful.
+> File "src/parser.mly", line 19, characters 0-5:
+> Warning: the precedence level assigned to GT is never useful.
+> File "src/parser.mly", line 19, characters 0-5:
+> Warning: the precedence level assigned to LE is never useful.
+> File "src/parser.mly", line 19, characters 0-5:
+> Warning: the precedence level assigned to LT is never useful.
+> File "src/parser.mly", line 20, characters 0-5:
+> Warning: the precedence level assigned to MINUS is never useful.
+> File "src/parser.mly", line 18, characters 0-5:
+> Warning: the precedence level assigned to NEQ is never useful.
+> File "src/parser.mly", line 16, characters 0-5:
+> Warning: the precedence level assigned to OR is never useful.
+> File "src/parser.mly", line 21, characters 0-5:
+> Warning: the precedence level assigned to PERCENT is never useful.
+> File "src/parser.mly", line 20, characters 0-5:
+> Warning: the precedence level assigned to PLUS is never useful.
+> File "src/parser.mly", line 14, characters 0-9:
+> Warning: the precedence level assigned to SEMI is never useful.
+> File "src/parser.mly", line 21, characters 0-5:
+> Warning: the precedence level assigned to SLASH is never useful.
+> File "src/parser.mly", line 21, characters 0-5:
+> Warning: the precedence level assigned to STAR is never useful.
+> File "src/parser.mly", line 13, characters 0-9:
+> Warning: the precedence level assigned to below_SEMI is never useful.
+> Warning: 4 states have shift/reduce conflicts.
+> Warning: 52 shift/reduce conflicts were arbitrarily resolved.
+$ (cd _build/default && /usr/bin/ocamldep.opt -modules -intf src/parser.mli) > _build/default/src/.ksharp.objs/ksharp__Parser.intf.d
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -33-39 -bin-annot -I src/.ksharp.objs/byte -no-alias-deps -opaque -open Ksharp -o src/.ksharp.objs/byte/ksharp__Parser.cmi -c -intf src/parser.mli)
+$ (cd _build/default && /usr/bin/ocamldep.opt -modules -impl src/parser.ml) > _build/default/src/.ksharp.objs/ksharp__Parser.impl.d
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -33-39 -bin-annot -I src/.ksharp.objs/byte -no-alias-deps -opaque -open Ksharp -o src/.ksharp.objs/byte/ksharp__Lexer.cmo -c -impl src/lexer.ml)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.ksharp.objs/byte -I src/.ksharp.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Ksharp -o src/.ksharp.objs/native/ksharp__Lexer.cmx -c -impl src/lexer.ml)
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -33-39 -bin-annot -I src/.ksharp.objs/byte -no-alias-deps -opaque -open Ksharp -o src/.ksharp.objs/byte/ksharp__Compiler.cmo -c -impl src/compiler.ml)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.ksharp.objs/byte -I src/.ksharp.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Ksharp -o src/.ksharp.objs/native/ksharp__Compiler.cmx -c -impl src/compiler.ml)
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -26 -bin-annot -I bin/.main.eobjs/byte -I src/.ksharp.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I src/.ksharp.objs/byte -I src/.ksharp.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.ksharp.objs/byte -I src/.ksharp.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Ksharp -o src/.ksharp.objs/native/ksharp__Parser.cmx -c -impl src/parser.ml)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o src/ksharp.cmxa src/.ksharp.objs/native/ksharp.cmx src/.ksharp.objs/native/ksharp__Ast.cmx src/.ksharp.objs/native/ksharp__Semantic.cmx src/.ksharp.objs/native/ksharp__Parser.cmx src/.ksharp.objs/native/ksharp__Lexer.cmx src/.ksharp.objs/native/ksharp__Compiler.cmx src/.ksharp.objs/native/ksharp__Codegen.cmx)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe src/ksharp.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)

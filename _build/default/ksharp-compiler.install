@@ -1,0 +1,46 @@
+lib: [
+  "_build/install/default/lib/ksharp-compiler/META"
+  "_build/install/default/lib/ksharp-compiler/dune-package"
+  "_build/install/default/lib/ksharp-compiler/lib/ast.ml" {"lib/ast.ml"}
+  "_build/install/default/lib/ksharp-compiler/lib/codegen.ml" {"lib/codegen.ml"}
+  "_build/install/default/lib/ksharp-compiler/lib/compiler.ml" {"lib/compiler.ml"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp.a" {"lib/ksharp.a"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp.cma" {"lib/ksharp.cma"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp.cmi" {"lib/ksharp.cmi"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp.cmt" {"lib/ksharp.cmt"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp.cmx" {"lib/ksharp.cmx"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp.cmxa" {"lib/ksharp.cmxa"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp.ml" {"lib/ksharp.ml"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp__Ast.cmi" {"lib/ksharp__Ast.cmi"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp__Ast.cmt" {"lib/ksharp__Ast.cmt"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp__Ast.cmx" {"lib/ksharp__Ast.cmx"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp__Codegen.cmi" {"lib/ksharp__Codegen.cmi"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp__Codegen.cmt" {"lib/ksharp__Codegen.cmt"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp__Codegen.cmx" {"lib/ksharp__Codegen.cmx"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp__Compiler.cmi" {"lib/ksharp__Compiler.cmi"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp__Compiler.cmt" {"lib/ksharp__Compiler.cmt"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp__Compiler.cmx" {"lib/ksharp__Compiler.cmx"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp__Lexer.cmi" {"lib/ksharp__Lexer.cmi"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp__Lexer.cmt" {"lib/ksharp__Lexer.cmt"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp__Lexer.cmx" {"lib/ksharp__Lexer.cmx"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp__Parser.cmi" {"lib/ksharp__Parser.cmi"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp__Parser.cmt" {"lib/ksharp__Parser.cmt"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp__Parser.cmti" {"lib/ksharp__Parser.cmti"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp__Parser.cmx" {"lib/ksharp__Parser.cmx"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp__Semantic.cmi" {"lib/ksharp__Semantic.cmi"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp__Semantic.cmt" {"lib/ksharp__Semantic.cmt"}
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp__Semantic.cmx" {"lib/ksharp__Semantic.cmx"}
+  "_build/install/default/lib/ksharp-compiler/lib/lexer.ml" {"lib/lexer.ml"}
+  "_build/install/default/lib/ksharp-compiler/lib/parser.ml" {"lib/parser.ml"}
+  "_build/install/default/lib/ksharp-compiler/lib/parser.mli" {"lib/parser.mli"}
+  "_build/install/default/lib/ksharp-compiler/lib/semantic.ml" {"lib/semantic.ml"}
+]
+libexec: [
+  "_build/install/default/lib/ksharp-compiler/lib/ksharp.cmxs" {"lib/ksharp.cmxs"}
+]
+bin: [
+  "_build/install/default/bin/ksharp"
+]
+doc: [
+  "_build/install/default/doc/ksharp-compiler/README.md"
+]

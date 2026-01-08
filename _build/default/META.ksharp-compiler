@@ -1,0 +1,10 @@
+package "lib" (
+  directory = "lib"
+  version = "0.1.0"
+  description = ""
+  requires = ""
+  archive(byte) = "ksharp.cma"
+  archive(native) = "ksharp.cmxa"
+  plugin(byte) = "ksharp.cma"
+  plugin(native) = "ksharp.cmxs"
+)

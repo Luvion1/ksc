@@ -1,0 +1,15 @@
+opam-version: "2.0"
+added: [
+  "bin/menhir" {"F:S7392376T1767887879.87"}
+  "doc/menhir" {"D"}
+  "doc/menhir/LICENSE" {"F:S45483T1767887879.87"}
+  "doc/menhir/manual.html" {"F:S417044T1767887879.87"}
+  "doc/menhir/manual.pdf" {"F:S539068T1767887879.87"}
+  "doc/menhir/manual001.png" {"F:S4309T1767887879.87"}
+  "doc/menhir/manual002.png" {"F:S4093T1767887879.87"}
+  "doc/menhir/manual003.png" {"F:S5231T1767887879.87"}
+  "lib/menhir" {"D"}
+  "lib/menhir/META" {"F:S0T1767887879.87"}
+  "lib/menhir/dune-package" {"F:S282T1767887879.87"}
+  "man/man1/menhir.1" {"F:S6206T1767887879.87"}
+]

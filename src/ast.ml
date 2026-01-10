@@ -4,6 +4,11 @@ type ty =
   | F32 | F64
   | Str | Char | BoolTy
   | Unit
+  | StructType of (string * ty) list  (* field name and type *)
+  | EnumType of (string * ty list) list  (* variant name and parameter types *)
+  | OptionalType of ty
+  | ListType of ty
+  | MapType of ty * ty  (* key type, value type *)
 
 type binop =
   | Add | Sub | Mul | Div | Mod
@@ -26,9 +31,12 @@ type expr =
   | BinOp of expr * binop * expr
   | UnOp of unop * expr
   | Call of expr * expr list
-  | If of expr * stmt list * stmt list option
+
   | Match of expr * (pattern * expr) list
   | Block of stmt list * expr option
+  | Cast of expr * ty
+  | FieldAccess of expr * string
+  | Throw of expr
 
 and pattern =
   | PVar of string
@@ -39,8 +47,13 @@ and stmt =
   | Let of bool * string * ty option * expr  (* mut, name, ty, expr *)
   | Assign of string * expr
   | ExprStmt of expr
+  | If of expr * stmt list * stmt list option
   | While of expr * stmt list
   | For of string * expr * stmt list
+  | Const of string * ty * expr
+  | StructDef of string * (string * ty) list
+  | EnumDef of string * (string * ty list) list
+  | Return of expr option
 
 type func =
   { name : string

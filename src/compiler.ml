@@ -5,8 +5,7 @@ let compile filename =
     let ast = Parser.program Lexer.token lexbuf in
     close_in ic;
     Semantic.check_program ast;
-    (* let ll_module = Codegen.emit_program ast in
-    Llvm.dump_module ll_module; *)
+    Codegen.emit_program ast;
     ast
   with
   | Lexer.Error msg ->

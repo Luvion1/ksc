@@ -42,8 +42,10 @@ rule token = parse
   | "enum" { ENUM }
   | "type" { TYPE }
   | "struct" { STRUCT }
+  | "Map" { MAP }
   | "ext" { EXT }
   | "in" { IN }
+  | "throw" { THROW }
   | "||" { OR }
   | "&&" { AND }
   | "==" { EQ }
@@ -73,6 +75,7 @@ rule token = parse
   | "]" { RBRACK }
   | "|" { PIPE }
   | "_" { UNDERSCORE }
+  | "?" { QUESTION }
   | "\"" { string_literal lexbuf }
   | "'" { char_literal lexbuf }
   | digit+ as i { INT (int_of_string i) }

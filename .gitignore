@@ -1,0 +1,42 @@
+# Build artifacts
+_build/
+*.exe
+*.out
+*.o
+*.a
+*.cmi
+*.cmo
+*.cmx
+*.cmxa
+*.cmxs
+*.cmt
+*.cmti
+
+# OCaml specific
+*.annot
+*.merlin
+*.merlin-*
+*.ml-gen
+*.mli-gen
+*.mlpack
+*.mllib
+*.mli-pack
+*.mlpack
+*.merlin
+*.merlin-*
+
+# Dune specific
+.dune/
+*.dune
+dune.lock
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/settings.json
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
